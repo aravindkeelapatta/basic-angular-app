@@ -1,34 +1,40 @@
-var app = angular.module("myApp", ["ngRoute"])
-                 .config(["$locationProvider","$routeProvider", function($locationProvider,$routeProvider) {
+var app = angular.module("myApp", ["ui.router"])
+                 .config(["$locationProvider","$stateProvider", function($locationProvider,$stateProvider) {
                  	$locationProvider.hashPrefix('')
                
-			       $routeProvider
-				    .when("/", {
+			       $stateProvider
+				    .state("index", {
+				    	url : '/',
 					   templateUrl: "pages/index.html",
-					   controller : "indexController"
+					   controller : "indexController",
+					   caseInsensitiveMatch : true
 					})
-					.when("/home", {
+					.state("home", {
+						url : '/home',
 						templateUrl : "pages/home.html",
 						controller  : "homeController"
 					})
-					.when("/register", {
+					.state("register", {
+						url : '/register',
 					   templateUrl: "pages/register.html",
 					   controller : "registerController"
 					})
-					.when("/login", {
+					.state("login", {
+						url : '/login',
 					   templateUrl: "pages/login.html",
-					   controller : "loginController"
+					   controller : "loginController",
+					   caseInsensitiveMatch : true
 					})
 				 }])
 				 .controller("indexController", function($scope) {
-					 $scope.message = "Index Page"
+					 $scope.message = "Index Page";
 				 })
 				 .controller("homeController", function($scope) {
-					 $scope.message = "Home Page"
+					 $scope.message = "Home Page";
 				 })
 				 .controller("registerController", function($scope) {
-					 $scope.message = "Register Page"
+					 $scope.message = "Register Page";
 				 })
 				 .controller("loginController", function($scope) {
-					 $scope.message = "Login Page"
+					 $scope.message = "Login Page";
 				 })
