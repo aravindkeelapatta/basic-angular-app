@@ -1,45 +1,90 @@
 <!DOCTYPE html>
 <html lang="en" ng-app= "myApp">
 <head>
-  <title>Bootstrap Example</title>
+  <title>TechEra</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   
+
+  <style type="text/css">
+    
+
+  </style>
 </head>
 <body>
-<script type = "text/javascript" src="https://code.angularjs.org/1.6.4/angular.js
-"></script>
+<script type = "text/javascript" src="https://code.angularjs.org/1.6.4/angular.js"></script>
 <script type = "text/javascript" src="https://code.angularjs.org/1.6.4/angular-route.js"></script>
 <script type="text/javascript" src = "https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"></script>
 
 <script type = "text/javascript" src = "app.js"></script>
 
-
-<nav class="navbar navbar-default" style = "height: 70px;">
+<nav class="navbar navbar-default" style = "height: 100px;">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#" style ="font-size: 25px; margin-top: 7px;">TechEra Skill Development</a>
+    <a class="navbar-brand" href="http://www.techeraglobal.com/">
+         <img src ="http://www.techeraglobal.com/images/logo.png" alt = "Logo"  style="margin-left: 15px; margin-top: -5px;">
+    </a>
     </div>
-    <ul class="nav navbar-nav" style = "float: right; margin-right: 60px; margin-top: 7px;">
+    <ul class="nav navbar-nav" style = "margin-left: 250px; margin-top: 35px; font-size: 20px; display: block; font-family: 'PTN57F';">
       <li><a ui-sref="home">Home</a></li>
       <li><a ui-sref="aboutus">About Us</a></li>
+      <li><a ui-sref="services">Services & Solutions</a></li>
+      <li><a ui-sref="clients">Clients</a></li>
+      <li><a ui-sref="partners">Partners</a></li>
+      <li><a ui-sref="carees">Careers</a></li>
       <li><a ui-sref="register">Register</a></li>
       <li><a ui-sref="login">Login</a></li>
     </ul>
   </div>
 </nav>
 <div>
+<div class="container">  
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="http://www.techeraglobal.com/images/7c10b02737deeba5e80c54abaedea1f2.jpg" alt="" style="width:100%;">
+      </div>
+
+      <div class="item">
+        <img src="http://www.techeraglobal.com/images/78ee41cf5b868e8f887d325d96057590.jpg" alt="" style="width:100%;">
+      </div>
+    
+      <div class="item">
+        <img src="http://www.techeraglobal.com/images/7c01b6e9300700398fe28b0c9d96ece9.jpg" alt="" style="width:100%;">
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
 <ui-view></ui-view>
 </div>
 
-<div style= "margin-top: 800px; margin-left: 5px; background-color : pink; height: 30px;">
-<footer>
- <p>© TECHERA. All Rights Reserved 2017.</p>
-</div>
+<div style="margin-top: 300px;">
+<footer class="container-fluid text-center">
+  <p>© TECHERA. All Rights Reserved 2017.</p>
+  <p> <a href="http://www.techeraglobal.com/" title="TechEra" style="text-decoration: none;">www.TechEra.com</a></p>
 </footer>
-
+</div>
 </body>
 </html>
